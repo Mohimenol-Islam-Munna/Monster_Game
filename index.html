@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head lang="en-US">
+	<meta charset="utf-8">
+	<title>Monstar Game</title>
+	<!--Bootstrap-->
+	<link rel="stylesheet" type="text/css" href="bootstrap4/css/bootstrap.min.css">
+	<script type="text/javascript" src="bootstrap4/js/bootstrap.min.js"></script>
+
+	<!--vue js-->
+	<script type="text/javascript" src="vue.js"></script>
+
+	<!--custom css-->
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body class="container">
+	<div id="app">
+		<div class="row my-4">
+			<div class="col-md-6 text-center ">
+				<h1>YOU</h1>
+				<div class="progress c-bar">
+					<div class="progress-bar custom-bar bg-success" :style="{width: playerHealth + '%'}">
+						{{playerHealth}}
+				    </div>
+				</div>
+			</div>
+			<div class="col-md-6 text-center">
+				<h1>MONSTER</h1>
+				<div class="progress c-bar">
+					<div class="progress-bar custom-bar bg-success" :style="{width: monsterHealth + '%'}">
+					   	{{monsterHealth}}
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="start" v-if="gameIsRunning">
+			<button class="btn btn-primary btn-lg" @click="startGame">Start New Game</button>
+		</div>
+
+		<div class="state" v-else>
+			<button class="btn btn-danger btn-lg mr-4" @click="attack">ATTACK</button>
+			<button class="btn btn-warning btn-lg mr-4" @click="specialAttack">SPECIAL ATTACK</button>
+			<button class="btn btn-info btn-lg mr-4" @click="heal">HEAL</button>
+			<button class="btn btn-light btn-lg mr-4" @click="giveUp">GIVE UP</button>
+		</div>
+
+		<div class="change-state">
+			
+		</div>
+	</div>
+	
+
+
+<script type="text/javascript" src="app.js"></script>
+</body>
+</html>

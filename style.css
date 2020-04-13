@@ -1,0 +1,36 @@
+.start{
+	width: 100%;
+	height: 80px;
+	border: 1px solid gray; 
+	border-radius:15px;
+	text-align: center;
+	line-height: 80px;
+	box-shadow: 1px 1px 1px grey;
+}
+.state{
+	width: 100%;
+	height: 80px;
+	margin-top: 30px;
+	border: 1px solid gray; 
+	border-radius: 15px;
+	text-align: center;
+	line-height: 80px;
+	box-shadow: 1px 1px 1px grey;
+}
+.change-state{
+	width: 100%;
+	height: 40px;
+	margin-top: 30px;
+	border: 1px solid gray;
+	border-radius: 15px;
+	box-shadow: 1px 1px 1px grey;
+}
+.c-bar{
+	width: 75%;
+	margin: auto; 
+}
+.custom-bar{
+	width: 75%;
+	height:35px;
+	line-height: 35px
+}
